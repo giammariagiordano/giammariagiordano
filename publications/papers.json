@@ -90,11 +90,20 @@
       "id": "Fair2025",
       "authors": "Alessandra Parziale, Gianmario Voria, Giammaria Giordano, Gemma Catolino, Gregorio Robles, Fabio Palomba",
       "title": "🏆Contextual Fairness-Aware Practices in ML: A Cost-Effective Empirical Evaluation",
-      "journal": "International Conference - Euromicro SEAA 2022",
-      "pdf": "../papers/C4.pdf",
-      "slides": "../slides/C4.pdf",
+      "journal": "1st International Workshop on Fairness in Software Systems",
+      "pdf": "../papers/C8.pdf",
       "abstract": "As machine learning (ML) systems become central to critical decision-making, concerns over fairness and potential biases have increased. To address this, the software engineering (SE) field has introduced bias mitigation techniques aimed at enhancing fairness in ML models at various stages. Additionally, recent research suggests that standard ML engineering practices can also improve fairness; these practices, known as fairness-aware practices, have been cataloged across each stage of the ML development life cycle. However, fairness remains context- dependent, with different domains requiring customized solutions. Furthermore, existing specific bias mitigation methods may sometimes degrade model performance, raising ongoing discussions about the trade-offs involved. In this paper, we empirically investigate fairness-aware practices from two perspectives: contextual and cost-effectiveness. The contextual evaluation explores how these practices perform in various application domains, identifying areas where specific fairness adjustments are particularly effective. The cost-effectiveness evaluation considers the trade-off between fairness improvements and potential performance costs. Our findings provide insights into how context influences the effectiveness of fairness-aware practices. This research aims to guide SE practitioners in selecting practices that achieve fairness with minimal performance costs, supporting the development of ethical ML systems."
+    },
+    {
+      "id": "codeSmile",
+      "authors": "Gilberto Recupito, Giammaria Giordano, Filomena Ferrucci, Dario Di Nucci, Fabio Palomba",
+      "title": " When Code Smells Meet ML: On the Lifecycle of ML-specific Code Smells in ML-enabled Systems",
+      "journal": "Journal - Empirical Software Engineering (EMSE)",
+      "pdf": "../papers/J5.pdf",
+      "abstract": "The adoption of Machine Learning (ML)-enabled systems is growing rapidly, introducing novel challenges in maintaining quality and managing technical debt in these complex systems. Among the key quality threats are ML-specific code smells (ML-CSs), suboptimal implementation practices in ML pipelines that can compromise system performance, reliability, and maintainability. Although these smells have been defined in the literature, detailed insights into their characteristics, evolution, and mitigation strategies are still needed to help developers address these quality issues effectively. In this paper, we investigate the emergence and evolution of ML-CSs through a large-scale empirical study focusing on (i) their prevalence in real ML-enabled systems, (ii) how they are introduced and removed, and (iii) their survivability. We analyze over 400,000 commits from 337 ML-enabled projects, leveraging CodeSmile, a novel ML smell detector that we developed to enable our investigation and identify ML-specific code smells. Our results reveal that: (1) CodeSmile can detect ML-CSs with precision and recall rates of 87.4% and 78.6%, respectively; (2) ML-CSs are frequently introduced during file modifications in new feature tasks; (3) smells are typically removed during tasks related to new features, enhancements, or refactoring; and (4) the majority of ML-CSs are resolved within the first 10% of commits. Based on these findings, we provide actionable conclusions and insights to guide future research and quality assurance practices for ML-enabled systems."
     }
+
+   
   ]
 }
 
