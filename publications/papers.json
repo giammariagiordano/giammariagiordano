@@ -1,14 +1,6 @@
 {
   "papers": [
-    {
-      "id": "MSR06",
-      "authors": "G. Recupito, G. Giordano, Filomena Ferrucci, Dario Di Nucci, Fabio Palomba",
-      "title": "When Code Smells Meet ML: On the Lifecycle of ML-specific Code Smells in ML-enabled Systems",
-      "journal": "Preprint - Mining Software Repositories (MSR)",
-      "pdf": "../papers/C6.pdf",
-      "slides": "../slides/C6.pdf",
-      "abstract": "Context. The adoption of Machine Learning (ML)–enabled systems is steadily increasing. Nevertheless, there is a shortage of ML-specific quality assurance approaches, possibly because of the limited knowledge of how quality-related concerns emerge and evolve in ML-enabled systems. Objective. We aim to investigate the emergence and evolution of specific types of quality-related concerns known as ML-specific code smells, i.e., sub-optimal implementation solutions applied on ML pipelines that may significantly decrease both quality and maintainability of ML-enabled systems. More specifically, we present a plan to study ML-specific code smells by empirically analyzing (i) their prevalence in real ML-enabled systems, (ii) how they are introduced and removed, and (iii) their survivability. Method. We will conduct an exploratory study, mining a large dataset of ML-enabled systems and analyzing over 400k commits about 337 projects. We will track and inspect the introduction and evolution of ML smells through CodeSmile, a novel ML smell detector that we will build to enable our investigation and to detect ML-specific code smells."
-    },
+
     {
       "id": "EMSE23",
       "authors": "Giammaria Giordano, Gerardo Festa, Gemma Catolino, Fabio Palomba, Filomena Ferrucci, Carmine Gravino",
@@ -101,6 +93,14 @@
       "journal": "Journal - Empirical Software Engineering (EMSE)",
       "pdf": "../papers/J5.pdf",
       "abstract": "The adoption of Machine Learning (ML)-enabled systems is growing rapidly, introducing novel challenges in maintaining quality and managing technical debt in these complex systems. Among the key quality threats are ML-specific code smells (ML-CSs), suboptimal implementation practices in ML pipelines that can compromise system performance, reliability, and maintainability. Although these smells have been defined in the literature, detailed insights into their characteristics, evolution, and mitigation strategies are still needed to help developers address these quality issues effectively. In this paper, we investigate the emergence and evolution of ML-CSs through a large-scale empirical study focusing on (i) their prevalence in real ML-enabled systems, (ii) how they are introduced and removed, and (iii) their survivability. We analyze over 400,000 commits from 337 ML-enabled projects, leveraging CodeSmile, a novel ML smell detector that we developed to enable our investigation and identify ML-specific code smells. Our results reveal that: (1) CodeSmile can detect ML-CSs with precision and recall rates of 87.4% and 78.6%, respectively; (2) ML-CSs are frequently introduced during file modifications in new feature tasks; (3) smells are typically removed during tasks related to new features, enhancements, or refactoring; and (4) the majority of ML-CSs are resolved within the first 10% of commits. Based on these findings, we provide actionable conclusions and insights to guide future research and quality assurance practices for ML-enabled systems."
+    },
+    {
+      "id": "practices_and_codesmells",
+      "authors": "Giammaria Giordano, Antonio Della Porta, Filomena Ferrucci, Fabio Palomba",
+      "title": " An Evidence-Based Study on the Relationship of Software Engineering Practices on Code Smells in Python ML Projects",
+      "journal": "Preprint -- International Conference - Euromicro SEAA 2025",
+      "pdf": "../papers/C9.pdf",
+      "abstract": "The rapid adoption of Machine Learning (ML) technologies has introduced new challenges for code quality. Code smells, i.e., suboptimal design and implementation choices applied when developing source code, represent a particularly prevalent problem. While software engineering (SE) practices are often recommended to improve maintainability, their actual impact on code smells in ML projects remains unclear. In this paper, we present an evidence-based empirical study of 566 real-world Python ML projects from the NICHE dataset, labeled according to adherence to eight established SE practices. Using static analysis and statistical testing, we assess the relationship between these practices and the presence of ten Python-specific code smells. Our results show that projects adopting SE practices exhibit significantly fewer code smells. In particular, Continuous Integration is negatively correlated with the Complex Container Comprehension smell. These findings highlight the importance of engineering discipline in managing code quality in ML development."
     }
 
    
