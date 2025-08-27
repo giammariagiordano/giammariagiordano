@@ -307,3 +307,18 @@ body {
 .publication-meta { display: flex; flex-direction: column; height: 100%; }
 .publication-content { flex: 1 1 auto; }
 .publication-actions { margin-top: auto; padding-top: .5rem; }
+
+
+/* Hobbies: rifiniture */
+#hobbies .icon-cube {
+  width: 24px;
+  height: 24px;
+  margin-right: .5rem;
+  vertical-align: -4px; /* allinea con il testo del titolo */
+}
+
+#hobbies .hobbies-text {
+  max-width: 60ch;
+  margin: 0 auto;
+  text-align: center;
+}
