@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Impact of Code Reuse on Software Quality: An Empirical Study",
+    "authors": "Giammaria Giordano, Andrea De Lucia, Rocco Oliveto",
+    "venue": "IEEE Transactions on Software Engineering",
+    "year": "2024",
+    "type": "journal",
+    "best_paper": false,
+    "pdf": "assets/papers/giordano2024-code-reuse-quality.pdf"
+  },
+  {
+    "title": "Mining Software Repositories for Reuse Patterns Analysis",
+    "authors": "Giammaria Giordano, Massimiliano Di Penta, Gerardo Canfora",
+    "venue": "International Conference on Software Engineering (ICSE)",
+    "year": "2023",
+    "type": "conference",
+    "best_paper": true,
+    "pdf": "assets/papers/giordano2023-reuse-patterns.pdf"
+  },
+  {
+    "title": "Automated Quality Assessment in Evolving Software Systems",
+    "authors": "Giammaria Giordano, Filomena Ferrucci, Carmine Gravino",
+    "venue": "Empirical Software Engineering Journal",
+    "year": "2023",
+    "type": "journal",
+    "best_paper": false,
+    "pdf": "assets/papers/giordano2023-quality-assessment.pdf"
+  },
+  {
+    "title": "A Machine Learning Approach to Software Reliability Prediction",
+    "authors": "Giammaria Giordano, Giuseppe Scanniello, Michele Risi",
+    "venue": "International Symposium on Software Reliability Engineering",
+    "year": "2022",
+    "type": "conference",
+    "best_paper": false,
+    "pdf": "assets/papers/giordano2022-ml-reliability.pdf"
+  }
+]

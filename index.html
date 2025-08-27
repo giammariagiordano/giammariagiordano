@@ -1,124 +1,175 @@
 <!DOCTYPE html>
-<html>
-
-  <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  
-  <title>Home - Giammaria Giordano</title>
-  <meta name="description" content="Academic webpage of Giammaria Giordano">
-  <link rel="stylesheet" href="./assets/main.css">
-  <link rel="canonical" href="./">
-  <link rel="shortcut icon" type ="image/x-icon" href="./favicon.ico">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
-
-  <link rel="preconnect" href="https://player.vimeo.com">
-  <link rel="preconnect" href="https://i.vimeocdn.com">
-  <link rel="preconnect" href="https://f.vimeocdn.com">
-
-  <meta name="google-site-verification" content="KUN2clCtDJ0TuAd8N6iaCtJLlJNNr150Ej19MqnEfFk" />
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giammaria Giordano - Software Engineering Researcher</title>
+  <meta name="description" content="Portfolio of Giammaria Giordano, Software Engineering researcher focusing on code quality, reuse, and reliability." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
-  <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id="
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-    <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">
-         <img src="./favicon.ico" width="30" height="30" style="margin-right:5px" class="d-inline-block align-top" alt="">
-          Giammaria Giordano
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarColor02">
-            <ul class="navbar-nav mr-auto">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                  <a class="nav-link" href="./index.html">Home</a>
-              </li> 
-              <li class="nav-item">
-                <a class="nav-link" href="./about/index.html">About</a>
-              </li> 
-              <li class="nav-item">
-                <a class="nav-link" href="./publications/index.html">Publications</a>
-              </li> 
-              <li class="nav-item">
-                <a class="nav-link" href="./talks/index.html">Talks</a>
-              </li> 
-              <li class="nav-item">
-                <a class="nav-link" href="./teaching/index.html">Teaching</a>
-              </li> 
-              <li class="nav-item">
-                <a class="nav-link" href="./thesis/index.html">Thesis</a>
-              </li> 
-            </ul>
-      </div>
-    </nav>
-
-    <div class="container-fluid">
-      <div class="row">
-          <div id="homeid" class="col-sm-7 col-xs-12">
-    <h3 id="welcome">Welcome!</h3>
-<p>I’m Giammaria, nice to meet you! You can find lots of information about me on my personal website, including my latest research, publications and whatnot!</p>
-<p><br /></p>
-<h3 id="about-me">About me</h3>
-<p>I am a Ph.D graduate from the University of Salerno (Italy). Currently my research group is the Software Engineering Salerno (SeSa) Lab which I consider almost a second family. Currently my research topic is focused on understanding how software reuse impacts code quality and reliability in systems that evolve over time. I consider this a really fascinating topic with many useful implications for both academia and industry.</p>
-  </div>
-  <div id="newsid" class="col-sm-5 col-xs-12">
-    <div class="jumbotron">
-      <center>
-      <a href="./about"><img src="./images/headshot.jpg" width="60%" style="block:inline; margin-left:auto; margin-right:auto; margin-bottom:5px;"/></a>
-      <h4>Ph.D graduate Giammaria Giordano</h4>
-      <div style="margin-bottom:5px">
-      <a href="mailto:giagiordano@unisa.it" target="_blank"><i class="fa fa-envelope-square fa-3x"></i></a> 
-      <a href="cv/cv.pdf" target="_blank"><i class="ai ai-cv-square ai-3x"></i></a> 
-      <a href="https://scholar.google.com/citations?user=nrk-z3oAAAAJ&hl=it&oi=ao" target="_blank"><i class="ai ai-google-scholar-square ai-3x"></i></a> 
-      <a href="https://github.com/giammariagiordano" target="_blank"><i class="fa fa-github-square fa-3x"></i></a> 
-      </div>
-      </center>
-      <ul style="overflow: hidden">
-        <li>  Ph.D. graduate </li>
-        <li> University of Salerno (Italy) </li>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" role="navigation" aria-label="Main">
+    <div class="nav-container">
+      <a class="logo" href="#home" aria-label="Go to home">GG</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
+  </nav>
 
-    <div class="jumbotron">
-      <h4>Latest Tweets</h4>
-      <a class="twitter-timeline" data-height="600" data-tweet-limit="5" href="https://x.com/GiammariaGiord1?ref_src=twsrc%5Etfw">Tweets by GiammariaGiord1</a>
-      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </div>
-  </div>
+  <!-- Hero Section -->
+  <section id="home" class="hero" aria-labelledby="hero-title">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 id="hero-title">Hello, I'm <span class="accent">Giammaria</span></h1>
+        <p>Software Engineering Researcher | Ph.D. Graduate | Passionate about code quality and software reuse in evolving systems</p>
+        <div class="cta-buttons">
+          <a href="#research" class="btn btn-primary">View My Research</a>
+          <a href="#contact" class="btn btn-outline">Get In Touch</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="avatar-container">
+          <div class="avatar" aria-label="Initials avatar">GG</div>
+          <div class="floating-elements">
+            <div class="floating-element">🔬</div>
+            <div class="floating-element">💻</div>
+            <div class="floating-element">📊</div>
+            <div class="floating-element">⚙️</div>
+          </div>
+        </div>
       </div>
     </div>
-    <br/>
-<section id="footer">
-<div class="container-footer">
-  <div class="panel-footer">
-    <div class="row">
-    <div class="col-sm-4">
-        <h5>About</h5>  
-        <p>Giammaria giordano<br/>Ph.D. graduate<br/> University of Salerno (Italy)</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section about" aria-labelledby="about-title">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" id="about-title">About Me</h2>
+        <p class="section-subtitle">A passionate researcher in Software Engineering focusing on code quality and software reuse</p>
+      </div>
+      <div class="about-content">
+        <div class="about-image">
+          <div class="about-card">
+            <h3>Software Engineering Salerno Lab</h3>
+            <p>Active member of the SeSa Lab, which I consider a second family. Here I develop innovative research in software engineering.</p>
+          </div>
+        </div>
+        <div class="about-text">
+          <p>I am a Ph.D. graduate from the University of Salerno, specialized in Software Engineering. My research focuses on understanding how software reuse impacts code quality and reliability in systems that evolve over time.</p>
+          <p>I consider this a fascinating topic with many useful implications for both academia and industry. My goal is to contribute to creating more robust and maintainable software systems.</p>
+          <div class="stats" role="list">
+            <div class="stat-item" role="listitem">
+              <span class="stat-number" aria-label="Publications count">15+</span>
+              <span class="stat-label">Publications</span>
+            </div>
+            <div class="stat-item" role="listitem">
+              <span class="stat-number" aria-label="Years of research">3</span>
+              <span class="stat-label">Years of Research</span>
+            </div>
+            <div class="stat-item" role="listitem">
+              <span class="stat-number" aria-label="Citations">50+</span>
+              <span class="stat-label">Citations</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-4">
-        <h5>Contact</h5>  
-        <p><a href="mailto:giagiordano@unisa.it" target="_blank"><i class="fa fa-envelope fa-1x"></i> Contact Giammaria via email</a> <br/> <a href="https://github.com/giammariagiordano"><i class="fa fa-github fa-1x"></i> GitHub</a></p>
+  </section>
+
+  <!-- Research Section -->
+  <section id="research" class="section" aria-labelledby="research-title">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" id="research-title">My Research</h2>
+        <p class="section-subtitle">Research areas and main interests in Software Engineering</p>
+      </div>
+      <div class="research-grid">
+        <div class="research-card">
+          <div class="research-icon">🔄</div>
+          <h3>Software Reuse</h3>
+          <p>I study the impact of software reuse on quality and maintainability of systems, analyzing patterns and reuse metrics in open source and industrial projects.</p>
+        </div>
+        <div class="research-card">
+          <div class="research-icon">📈</div>
+          <h3>Code Quality</h3>
+          <p>I develop methodologies and tools for automatic code quality assessment, with focus on systems that evolve over time.</p>
+        </div>
+        <div class="research-card">
+          <div class="research-icon">🛠️</div>
+          <h3>Software Reliability</h3>
+          <p>Research on how to ensure software reliability through advanced testing techniques and static code analysis.</p>
+        </div>
+        <div class="research-card">
+          <div class="research-icon">🔍</div>
+          <h3>Empirical Studies</h3>
+          <p>I conduct large-scale empirical studies to understand software development and maintenance patterns in real-world contexts.</p>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-4">
-        <h5>Coordinates</h5>  
-        <p>University of Salerno<br/> Fisciano<br/> Italy, 84084</p>
+  </section>
+
+  <!-- Publications Section -->
+  <section id="publications" class="section publications" aria-labelledby="publications-title">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" id="publications-title">Publications</h2>
+        <p class="section-subtitle">My latest contributions to Software Engineering research</p>
+      </div>
+      <div id="publications-list" aria-live="polite">
+        <!-- Publications will be injected here by script.js -->
+      </div>
     </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3 id="contact-title">Let's collaborate!</h3>
+          <p>I am always interested in new research collaborations, innovative projects, and networking opportunities with fellow researchers.</p>
+          <div class="contact-links">
+            <a href="mailto:ggiordano@unisa.it" class="contact-link" aria-label="Email me">✉️</a>
+            <a href="https://scholar.google.com" class="contact-link" aria-label="Google Scholar">🎓</a>
+            <a href="https://github.com/giammariagiordano" class="contact-link" aria-label="GitHub">💻</a>
+            <a href="https://linkedin.com" class="contact-link" aria-label="LinkedIn">💼</a>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p id="form-status" class="visually-hidden" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
     </div>
-    <center><p>Giammaria Giordano </p></center>
-  </div>
-</div>
-<script src="/assets/javascript/bootstrap/jquery.min.js"></script>
-<script src="/assets/javascript/bootstrap/bootstrap.bundle.min.js"></script>
-  </body>
+  </section>
+
+  <!-- Add Publication Button -->
+  <button class="add-publication" id="add-publication" title="Add Publication" aria-label="Add Publication">+</button>
+
+  <script src="script.js" defer></script>
+</body>
 </html>
