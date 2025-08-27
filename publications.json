@@ -1,23 +1,5 @@
 [
   {
-    "title": "On the Adoption and Effects of Source Code Reuse on Defect Proneness and Maintenance Effort",
-    "authors": "Giammaria Giordano, Gerardo Festa, Gemma Catolino, Fabio Palomba, Filomena Ferrucci, Carmine Gravino",
-    "venue": "Empirical Software Engineering (EMSE)",
-    "year": "2023",
-    "type": "journal",
-    "best_paper": false,
-    "pdf": "papers/J3.pdf"
-  },
-  {
-    "title": "QuantuMoonLight: A Low-Code Platform to Experiment with Quantum Machine Learning",
-    "authors": "Francesco Amato, Matteo Cicalese, Luca Contrasto, ... Giammaria Giordano, ..., Fabio Palomba",
-    "venue": "SoftwareX",
-    "year": "2023",
-    "type": "journal",
-    "best_paper": false,
-    "pdf": "papers/J2.pdf"
-  },
-  {
     "title": "On the use of artificial intelligence to deal with privacy in IoT systems: A systematic literature review",
     "authors": "Giammaria Giordano, Filomena Ferrucci, Fabio Palomba",
     "venue": "Journal of Systems and Software (JSS)",
@@ -45,13 +27,22 @@
     "pdf": "papers/C2.pdf"
   },
   {
-    "title": "The Yin and Yang of Software Quality: On the Relationship between Design Patterns and Code Smells",
-    "authors": "Giammaria Giordano, Giulia Sellitto, Aurelio Sepe, Fabio Palomba, Filomena Ferrucci",
-    "venue": "Euromicro SEAA",
-    "year": "2024",
-    "type": "conference",
-    "best_paper": true,
-    "pdf": "papers/C4.pdf"
+    "title": "QuantuMoonLight: A Low-Code Platform to Experiment with Quantum Machine Learning",
+    "authors": "Francesco Amato, Matteo Cicalese, Luca Contrasto, ... Giammaria Giordano, ..., Fabio Palomba",
+    "venue": "SoftwareX",
+    "year": "2023",
+    "type": "journal",
+    "best_paper": false,
+    "pdf": "papers/J2.pdf"
+  },
+  {
+    "title": "On the Adoption and Effects of Source Code Reuse on Defect Proneness and Maintenance Effort",
+    "authors": "Giammaria Giordano, Gerardo Festa, Gemma Catolino, Fabio Palomba, Filomena Ferrucci, Carmine Gravino",
+    "venue": "Empirical Software Engineering (EMSE)",
+    "year": "2023",
+    "type": "journal",
+    "best_paper": false,
+    "pdf": "papers/J3.pdf"
   },
   {
     "title": "Understanding Developer Practices and Code Smells Diffusion in AI-Enabled Software: A Preliminary Study",
@@ -61,6 +52,15 @@
     "type": "conference",
     "best_paper": false,
     "pdf": "papers/C5.pdf"
+  },
+  {
+    "title": "The Yin and Yang of Software Quality: On the Relationship between Design Patterns and Code Smells",
+    "authors": "Giammaria Giordano, Giulia Sellitto, Aurelio Sepe, Fabio Palomba, Filomena Ferrucci",
+    "venue": "Euromicro SEAA",
+    "year": "2024",
+    "type": "conference",
+    "best_paper": true,
+    "pdf": "papers/C4.pdf"
   },
   {
     "title": "Toward a Search-Based Approach to Support the Design of Security Tests for Malicious Network Traffic",
@@ -134,5 +134,4 @@
     "best_paper": false,
     "pdf": "papers/C11.pdf"
   }
-  
 ]
