@@ -1,5 +1,6 @@
 // ===== Config =====
 const PUBLICATIONS_URL = 'publications.json';
+const SPECIALS_URL = 'specials.json';
 
 // ===== DOM Helpers =====
 function qs(sel, scope = document) { return scope.querySelector(sel); }
@@ -106,6 +107,7 @@ function enableContactForm() {
 
 // ===== Init =====
 document.addEventListener('DOMContentLoaded', () => {
+  loadSpecials();
   loadPublications();
   enableSmoothScroll();
   enableNavbarScrollEffect();
@@ -113,3 +115,56 @@ document.addEventListener('DOMContentLoaded', () => {
   const addBtn = qs('#add-publication');
   if (addBtn) addBtn.addEventListener('click', addPublication);
 });
+
+
+// ===== Specials Rendering =====
+async function loadSpecials() {
+  const container = document.querySelector('#specials-list');
+  if (!container) return;
+  container.innerHTML = '<p class="fade-in">Loading specials…</p>';
+  try {
+    const resp = await fetch(SPECIALS_URL, { cache: 'no-store' });
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    const items = await resp.json();
+
+    // sort by year desc
+    items.sort((a,b) => String(b.year).localeCompare(String(a.year)));
+
+    container.innerHTML = '';
+    for (const it of items) {
+      const card = document.createElement('article');
+      card.className = 'special-card fade-in';
+      card.dataset.role = it.role || 'other';
+      card.innerHTML = `
+        <div class="special-meta">
+          <span class="special-venue">${it.venue || ''}</span>
+          <span class="special-year">${it.year || ''}</span>
+        </div>
+        <h3 class="special-title">${it.title || ''}
+          ${it.role ? `<span class="role-badge">${it.role}</span>` : ''}
+        </h3>
+        <div class="special-actions">
+          ${it.url ? `<a class="btn btn-primary" href="${it.url}" target="_blank" rel="noopener noreferrer">Open</a>` : ''}
+        </div>
+      `;
+      container.appendChild(card);
+    }
+
+    // filters
+    const controls = document.querySelector('.specials-controls');
+    if (controls) {
+      controls.addEventListener('click', (e) => {
+        const btn = e.target.closest('button[data-filter]');
+        if (!btn) return;
+        const role = btn.dataset.filter;
+        const cards = container.querySelectorAll('.special-card');
+        cards.forEach(c => {
+          c.style.display = (role === 'all' || c.dataset.role === role) ? '' : 'none';
+        });
+      });
+    }
+  } catch (err) {
+    container.innerHTML = '<p role="alert">Could not load specials. Please try again later.</p>';
+    console.error('Specials load error:', err);
+  }
+}

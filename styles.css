@@ -153,3 +153,18 @@ body {
   .research-grid { grid-template-columns: 1fr; }
   .cta-buttons { flex-direction: column; align-items: center; }
 }
+
+
+/* ===== Specials (Workshops & Special Issues) ===== */
+.specials { background: var(--bg-white); }
+.specials-controls { display: flex; gap: .5rem; justify-content: center; margin-bottom: 2rem; }
+.specials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem; }
+.special-card { background: var(--bg-white); padding: 1.25rem; border: 1px solid var(--border-light); border-radius: 12px; box-shadow: var(--shadow-sm); transition: transform .2s ease, box-shadow .2s ease; }
+.special-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.special-meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: .5rem; }
+.special-title { font-weight: 600; line-height: 1.4; margin-bottom: .25rem; }
+.special-venue { color: var(--primary-color); font-weight: 500; font-size: 0.9rem; }
+.special-year { background: var(--bg-gray); border: 1px solid var(--border-gray); font-size: .85rem; padding: .2rem .5rem; border-radius: 6px; }
+.role-badge { display: inline-block; font-size: .8rem; padding: .2rem .5rem; border-radius: 999px; border: 1px solid var(--border-light); color: var(--text-light); background: var(--bg-light); margin-left: .5rem; }
+.special-actions { margin-top: .75rem; }
+.special-actions a { text-decoration: none; }
