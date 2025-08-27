@@ -283,3 +283,18 @@ body {
   width: auto;
   display: block;
 }
+
+.publication-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* spinge giù l'ultimo blocco */
+}
+
+.publication-content {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.publication-actions {
+  margin-top: auto;
+}

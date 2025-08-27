@@ -184,3 +184,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // ...il resto della tua init
   setupObfuscatedEmailButton();
 });
+
+el.innerHTML = `
+  <div class="publication-meta">
+    <div class="publication-content">
+      <h3>${pub.title} ${bestBadge}</h3>
+      <div class="publication-authors">${pub.authors || ''}</div>
+      <div class="publication-venue">${pub.venue || ''}</div>
+    </div>
+    <div class="publication-actions">
+      ${pdfBtn}
+    </div>
+    <div class="publication-year">${pub.year || ''}</div>
+  </div>
+`;
