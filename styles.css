@@ -168,3 +168,67 @@ body {
 .role-badge { display: inline-block; font-size: .8rem; padding: .2rem .5rem; border-radius: 999px; border: 1px solid var(--border-light); color: var(--text-light); background: var(--bg-light); margin-left: .5rem; }
 .special-actions { margin-top: .75rem; }
 .special-actions a { text-decoration: none; }
+
+
+
+/* ===== Publications: Horizontal Scroll ===== */
+.publications-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: 1rem;
+}
+
+.pub-controls {
+  display: flex;
+  gap: .5rem;
+}
+
+.pub-btn {
+  padding: .6rem .9rem;
+  border: 1px solid var(--border-light);
+  background: var(--bg-white);
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  font-weight: 500;
+}
+.pub-btn:hover { box-shadow: var(--shadow-md); transform: translateY(-1px); }
+
+.pub-scroller-wrap {
+  position: relative;
+  mask-image: linear-gradient(to right, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
+}
+
+.pub-scroller {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: .5rem;
+  scrollbar-width: thin;
+}
+.pub-scroller::-webkit-scrollbar { height: 8px; }
+.pub-scroller::-webkit-scrollbar-thumb { background: var(--border-gray); border-radius: 999px; }
+
+.publication-item {
+  flex: 0 0 360px;
+  scroll-snap-align: start;
+  min-height: 160px;
+}
+
+@media (max-width: 480px) {
+  .publication-item { flex-basis: 85%; }
+}
+
+/* Year chips */
+.pub-year-chips {
+  display: flex; flex-wrap: wrap; gap: .5rem; align-items: center;
+}
+.pub-chip {
+  padding: .35rem .7rem; border: 1px solid var(--border-light);
+  border-radius: 999px; background: var(--bg-light); cursor: pointer; font-size: .9rem;
+}
+.pub-chip.active { background: var(--accent-color); color: #fff; border-color: transparent; }
