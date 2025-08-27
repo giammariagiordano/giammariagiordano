@@ -298,3 +298,12 @@ body {
 .publication-actions {
   margin-top: auto;
 }
+
+/* Allinea i bottoni in basso e uniforma l'altezza visiva delle card */
+.publication-item {
+  display: flex;
+  flex-direction: column;
+}
+.publication-meta { display: flex; flex-direction: column; height: 100%; }
+.publication-content { flex: 1 1 auto; }
+.publication-actions { margin-top: auto; padding-top: .5rem; }

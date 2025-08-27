@@ -2,7 +2,10 @@
 const PUBLICATIONS_URL = 'publications.json';
 const SPECIALS_URL = 'specials.json';
 
-// ===== Publications Rendering con SCORRIMENTO =====
+// --- helper robusto per risolvere link relativi (funziona anche in sottocartella GitHub Pages)
+const resolveHref = (p) => (p ? new URL(p, document.baseURI).toString() : null);
+
+// ===== Publications Rendering con SCORRIMENTO + bottoni allineati =====
 async function loadPublications() {
   const listHost = document.querySelector('#publications-list');
   listHost.innerHTML = '<p class="fade-in">Loading publications…</p>';
@@ -20,7 +23,7 @@ async function loadPublications() {
     }, {});
     const years = Object.keys(byYear).sort((a, b) => b.localeCompare(a));
 
-    // Build toolbar (chips anni + bottoni)
+    // Toolbar (chips anni + bottoni scorrimento)
     const toolbar = document.createElement('div');
     toolbar.className = 'publications-toolbar';
 
@@ -47,7 +50,7 @@ async function loadPublications() {
 
     toolbar.append(chips, controls);
 
-    // Build scroller
+    // Scroller
     const wrap = document.createElement('div');
     wrap.className = 'pub-scroller-wrap';
     const scroller = document.createElement('div');
@@ -65,7 +68,11 @@ async function loadPublications() {
         .sort((a, b) => String(b.year).localeCompare(String(a.year)))
         .forEach(pub => {
           const bestBadge = pub.best_paper ? '<span title="Best Paper" aria-label="Best Paper" style="margin-left:8px">🏆</span>' : '';
-          const pdfBtn = pub.pdf ? `<a class="btn btn-primary" href="${pub.pdf}" download>Download PDF</a>` : '';
+          const pdfHref = resolveHref(pub.pdf);
+          const pdfBtn = pdfHref
+            ? `<a class="btn btn-primary" href="${pdfHref}" download>Download PDF</a>`
+            : '';
+
           const el = document.createElement('div');
           el.className = 'publication-item fade-in';
           el.innerHTML = `
@@ -74,6 +81,8 @@ async function loadPublications() {
                 <h3>${pub.title} ${bestBadge}</h3>
                 <div class="publication-authors">${pub.authors || ''}</div>
                 <div class="publication-venue">${pub.venue || ''}</div>
+              </div>
+              <div class="publication-actions">
                 ${pdfBtn}
               </div>
               <div class="publication-year">${pub.year || ''}</div>
@@ -120,7 +129,7 @@ async function loadPublications() {
   }
 }
 
-// ===== Specials Rendering (resta com’era) =====
+// ===== Specials Rendering =====
 async function loadSpecials() {
   const container = document.querySelector('#specials-list');
   if (!container) return;
@@ -157,44 +166,22 @@ async function loadSpecials() {
   }
 }
 
+// ===== Obfuscated email button =====
+function setupObfuscatedEmailButton() {
+  const btn = document.getElementById('btn-contact');
+  if (!btn) return;
+  const b64 = 'Z2lhbW1hcmlhLmdpb3JkYW5vQHVuaXNhLml0';
+  const email = atob(b64);
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const subject = encodeURIComponent('Hello Giammaria');
+    window.location.href = `mailto:${email}?subject=${subject}`;
+  });
+}
+
 // ===== Init =====
 document.addEventListener('DOMContentLoaded', () => {
   loadPublications();
   loadSpecials();
-});
-
-function setupObfuscatedEmailButton() {
-  const btn = document.getElementById('btn-contact');
-  if (!btn) return;
-
-  // email: giammaria.giordano@unisa.it  (codificata Base64)
-  const b64 = 'Z2lhbW1hcmlhLmdpb3JkYW5vQHVuaXNhLml0';
-  const email = atob(b64);
-
-  btn.addEventListener('click', (e) => {
-    e.preventDefault();
-    const subject = encodeURIComponent('Hello Giammaria');
-    const mailto = `mailto:${email}?subject=${subject}`;
-    // Non inseriamo l'email nel DOM; apriamo direttamente il client mail
-    window.location.href = mailto;
-  });
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  // ...il resto della tua init
   setupObfuscatedEmailButton();
 });
-
-el.innerHTML = `
-  <div class="publication-meta">
-    <div class="publication-content">
-      <h3>${pub.title} ${bestBadge}</h3>
-      <div class="publication-authors">${pub.authors || ''}</div>
-      <div class="publication-venue">${pub.venue || ''}</div>
-    </div>
-    <div class="publication-actions">
-      ${pdfBtn}
-    </div>
-    <div class="publication-year">${pub.year || ''}</div>
-  </div>
-`;
