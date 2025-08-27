@@ -248,3 +248,33 @@ body {
   object-fit: cover;
   box-shadow: 0 8px 24px rgba(0,0,0,0.25);
 }
+
+.site-footer {
+  background: var(--bg-gray, #f3f4f6);
+  color: var(--text-dark, #111);
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+}
+
+.site-footer p {
+  margin: 0 0 0.75rem;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-socials .social-icon {
+  width: 28px;
+  height: 28px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.footer-socials .social-icon:hover {
+  filter: none;
+}
