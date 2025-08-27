@@ -278,3 +278,8 @@ body {
 .footer-socials .social-icon:hover {
   filter: none;
 }
+.logo img {
+  height: 48px;   /* regola a piacere */
+  width: auto;
+  display: block;
+}
