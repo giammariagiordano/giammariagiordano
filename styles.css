@@ -232,3 +232,19 @@ body {
   border-radius: 999px; background: var(--bg-light); cursor: pointer; font-size: .9rem;
 }
 .pub-chip.active { background: var(--accent-color); color: #fff; border-color: transparent; }
+
+
+.hero-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.hero-visual .hero-image {
+  width: 260px;        /* aumenta la dimensione */
+  height: auto;        /* proporzioni naturali */
+  border-radius: 12px; /* angoli morbidi, non più cerchio */
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
