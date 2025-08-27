@@ -162,3 +162,25 @@ document.addEventListener('DOMContentLoaded', () => {
   loadPublications();
   loadSpecials();
 });
+
+function setupObfuscatedEmailButton() {
+  const btn = document.getElementById('btn-contact');
+  if (!btn) return;
+
+  // email: giammaria.giordano@unisa.it  (codificata Base64)
+  const b64 = 'Z2lhbW1hcmlhLmdpb3JkYW5vQHVuaXNhLml0';
+  const email = atob(b64);
+
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const subject = encodeURIComponent('Hello Giammaria');
+    const mailto = `mailto:${email}?subject=${subject}`;
+    // Non inseriamo l'email nel DOM; apriamo direttamente il client mail
+    window.location.href = mailto;
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  // ...il resto della tua init
+  setupObfuscatedEmailButton();
+});
