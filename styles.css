@@ -324,7 +324,7 @@ body {
 }
 
 
-.twitter-box, .twitter-timeline {
+.twitter-box {
   max-width: 600px;
   margin: 0 auto;
   border-radius: 12px;
