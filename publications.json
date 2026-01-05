@@ -133,5 +133,32 @@
     "type": "conference",
     "best_paper": false,
     "pdf": "papers/C11.pdf"
+  },
+  {
+    "title": "Fair and Square? Evaluating Fairness of LLM-Generated Synthetic Datasets",
+    "authors": "Gianmario Voria, Benedetto Scala, Leopoldo Todisco, Carlo Venditto, Giammaria Giordano, Gemma Catolino, Fabio Palomba.",
+    "venue": "Elsevier's Information and Software Technology (IST)",
+    "year": "2025",
+    "type": "journal",
+    "best_paper": false,
+    "pdf": "papers/J7.pdf"
+  },
+  {
+    "title": "Fairness Set and Forgotten: Mining Fairness Toolkit Usage in Open-Source Machine Learning Projects",
+    "authors": "Alfonso Cannavale, Gianmario Voria, Antonio Scognamiglio, Giammaria Giordano, Gemma Catolino, Fabio Palomba.",
+    "venue": "Elsevier's Information and Software Technology (IST)",
+    "year": "2025",
+    "type": "journal",
+    "best_paper": false,
+    "pdf": "papers/J8.pdf"
+  },
+  {
+    "title": "Pythonic vs Refactorable Pythonic: On the Relationship between Pythonic Idioms and Code Quality in Machine Learning Projects",
+    "authors": "Gerardo Festa, Giammaria Giordano, Valeria Pontillo, Massimiliano Di Penta, Damian A. Tamburri, Fabio Palomba.",
+    "venue": "Elsevier's Information and Software Technology (IST)",
+    "year": "2026",
+    "type": "journal",
+    "best_paper": false,
+    "pdf": "papers/J9.pdf"
   }
 ]
